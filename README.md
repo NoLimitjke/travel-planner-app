@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Travel Planner App
 
-## Getting Started
+Универсальное веб-приложение для планирования путешествий, построенное на **Next.js** с использованием **TypeScript** и **Prisma** для взаимодействия с базой данных.  
+Проект помогает пользователям структурировать свои планы поездок, маршруты и важную информацию о путешествиях в одном месте.
 
-First, run the development server:
+---
+
+## 🚀 Описание
+
+**Travel Planner App** — это современное приложение на Next.js, где можно:
+
+- Создавать, редактировать и просматривать путешествия
+- Сохранять важные детали поездок
+- Управлять маршрутами и планами
+- Интерактивно работать с данными через UI
+- Работать с базой через ORM (Prisma)
+
+Проект использует:
+- **Next.js (App Router)**
+- **Prisma** + **PostgreSQL**
+- **TypeScript**
+
+## 🧠 Технологический стек
+
+| Компонент | Технология |
+|-----------|------------|
+| Frontend  | Next.js (React, App Router) |
+| Язык     | TypeScript |
+| ORM      | Prisma |
+| База данных | PostgreSQL (через Prisma) |
+| Управление зависимостями | npm  |
+| Статика  | папка `public` |
+| Настройка | `next.config.ts` |
+
+---
+
+## ⚙️ Установка
+
+1. **Клонирование репозитория**
+   ```bash
+   git clone https://github.com/NoLimitjke/travel-planner-app.git
+   cd travel-planner-app
+   ```
+2. **Установка зависимостей**
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+# либо
+yarn install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. **Настройка переменных окружения**
+Создайте файл .env по примеру и укажите данные для Prisma + базы:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```ini
+DATABASE_URL="file:./dev.db"
+```
+или
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```ini
+DATABASE_URL="postgresql://user:password@host:port/dbname"
+```
 
-## Learn More
+4. **🚀 Запуск проекта**
+```bash
+npm run dev
+```
+Откройте в браузере 
 
-To learn more about Next.js, take a look at the following resources:
+http://localhost:3000
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+5.**🛠 Возможности для расширения**
+Проект готов к развитию:
 
-## Deploy on Vercel
+✅ Добавить авторизацию (залогиненный пользователь хранит свои планы)
+✅ Реализовать API маршруты (app/api/...) для CRUD
+✅ Подключить внешние сервисы (погода, карты, POI API)
+✅ Реализовать drag-and-drop компоненты для маршрутов
+✅ Добавить SSR / SSG для оптимизации SEO
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+6. **📄 Лицензия**
+MIT — свободное использование и модификация.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+❤️ Благодарности
+Спасибо за интерес к проекту!
